@@ -61,6 +61,7 @@ If you want to customize the backend or frontend URLs:
 
 - Backend URL: Modify the backend URL in the frontend code located in `ai-web-app/components/predictForm.js`.
 - Frontend URL: Modify the port in the backend URL in the Jupyter Notebook if you're hosting the frontend on a different port.
+- Model Path: Modify the model path according to your model generation, in my case "./runs/classify/train9/weights/last.pt" was the one, your code be some other train.
 
 ## Contributing
 
