@@ -1,14 +1,15 @@
-// components/PredictForm.js
 import { useState } from 'react';
 import axios from 'axios';
 
 export default function PredictForm() {
   const [prediction, setPrediction] = useState(null);
+  const [image, setImage] = useState(null); // added this line
 
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
+    setImage(URL.createObjectURL(file));
 
-    const formData = new FormData();
+    const formData = new FormData();      // added this line
     formData.append('image', file);
 
     try {
@@ -25,34 +26,31 @@ export default function PredictForm() {
     }
   };
 
+  const removeUpload = () => {
+    setImage(null);
+  };
+
   return (
-    <div className="container">
-      <h1 className="heading">Object Detection</h1>
-      <input type="file" onChange={handleFileChange} />
+    <div className="predictForm-container">
+      <h1 className="predictForm-heading">Object Detection</h1>
+      <div className="file-upload">
+        <button className="file-upload-btn" type="button" onClick={() => document.querySelector('.file-upload-input').click()}>Add Image</button>
+        <div className="image-upload-wrap">
+          <input className="file-upload-input" type='file' onChange={handleFileChange} accept="image/*" />
+          <div className="drag-text">
+            <h3>Drag and drop a file or select add Image</h3>
+          </div>
+        </div>
+        {image &&
+          <div className="file-upload-content">
+            {image && <img className="file-upload-image" src={image} alt="Uploaded" />}
+            <div className="image-title-wrap">
+              <button type="button" onClick={removeUpload} className="remove-image">Remove <span className="image-title">Uploaded Image</span></button>
+            </div>
+          </div>
+        }
+      </div>
       {prediction && <p className="result">Predicted Class: {prediction}</p>}
-      <style jsx>{`
-        .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .heading {
-          font-size: 24px;
-          font-weight: bold;
-          margin-bottom: 20px;
-          color: #333;
-        }
-        .result {
-          font-size: 18px;
-          color: #0066ff;
-        }
-        input[type="file"] {
-          margin-top: 20px;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-        }
-      `}</style>
     </div>
   );
 }
