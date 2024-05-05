@@ -10,6 +10,7 @@ export default function PredictForm() {
     const file = e.target.files[0];
     setImage(URL.createObjectURL(file));
     setShowUploadBox(false);
+    setPrediction(null); // Reset prediction when a new image is uploaded
 
     const formData = new FormData();
     formData.append('image', file);
@@ -49,6 +50,7 @@ export default function PredictForm() {
     const file = e.dataTransfer.files[0];
     setImage(URL.createObjectURL(file));
     setShowUploadBox(false);
+    setPrediction(null); // Reset prediction when a new image is uploaded
 
     const formData = new FormData();
     formData.append('image', file);
@@ -71,7 +73,7 @@ export default function PredictForm() {
     <div className="predictForm-container">
       <h1 className="predictForm-heading">Object Detection</h1>
       <div className="file-upload" onDragOver={handleDragOver} onDrop={handleDrop}>
-        <button className="file-upload-btn" type="button" onClick={() => document.querySelector('.file-upload-input').click()}>Add Image</button>
+      <button className="file-upload-btn" type="button" onClick={() => document.querySelector('.file-upload-input')?.click()}>Add Image</button>
         {showUploadBox &&
           <div className="image-upload-wrap">
             <input className="file-upload-input" type='file' onChange={handleFileChange} accept="image/*" />
