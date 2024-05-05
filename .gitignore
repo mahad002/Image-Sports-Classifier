@@ -1,0 +1,11 @@
+# Ignore node_modules directory inside ai-web-app
+ai-web-app/node_modules/
+
+# Ignore .next directory inside ai-web-app (Next.js build output)
+ai-web-app/.next/
+
+# Ignore .DS_Store files (created by macOS)
+.DS_Store
+
+# Ignore .env files (environment variables configuration)
+.env
