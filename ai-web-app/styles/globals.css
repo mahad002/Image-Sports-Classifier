@@ -259,7 +259,11 @@ font-size: 14px;
 
 .result {
   background-color: antiquewhite;
+  color: black;
   width: 600px;
   margin: auto;
   padding: 50px;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
 }
