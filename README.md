@@ -59,7 +59,7 @@ This project involves building a sports image classifier using a dataset from [K
 
 If you want to customize the backend or frontend URLs:
 
-- Backend URL: Modify the backend URL in the frontend code located in `ai-web-app/pages/api/index.js`.
+- Backend URL: Modify the backend URL in the frontend code located in `ai-web-app/components/predictForm.js`.
 - Frontend URL: Modify the port in the backend URL in the Jupyter Notebook if you're hosting the frontend on a different port.
 
 ## Contributing
