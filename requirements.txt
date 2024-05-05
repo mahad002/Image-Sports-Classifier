@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+matplotlib
+torch
+numpy
+Pillow
+Flask
+flask-cors
+ultralytics==8.2.9
