@@ -267,3 +267,71 @@ font-size: 14px;
   display: flex;
   font-weight: bold;
 }
+
+.predictForm-container {
+  text-align: center;
+}
+
+.predictForm-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.file-upload {
+  display: inline-block;
+  position: relative;
+}
+
+.file-upload-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  border: 2px dashed #ccc;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.drag-text {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.file-upload-content {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.file-upload-image {
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.remove-image {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
