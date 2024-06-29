@@ -6,7 +6,7 @@ import io
 
 app = Flask(__name__)
 CORS(app) 
-model = YOLO('./runs/classify/train9/weights/last.pt')
+model = YOLO('./runs/classify/train17/weights/last.pt')
 
 @app.route('/predict', methods=['POST'])
 def predict():
