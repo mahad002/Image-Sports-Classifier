@@ -56,7 +56,7 @@ export default function PredictForm() {
     formData.append('image', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/predict', formData, {
+      const response = await axios.post('https://image-sports-classifier.onrender.com/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
