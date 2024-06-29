@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <header class="header">
         <div class="brand-box">
-          <span class="brand">Mahad Sheikh & Omer Hashmi</span>
+          <span class="brand">Muhammad Mahad Sheikh</span>
         </div>
 
         <div class="text-box">
